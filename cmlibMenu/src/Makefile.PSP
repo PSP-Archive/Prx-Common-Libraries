@@ -1,0 +1,89 @@
+TARGET = cmlibmenu
+
+MAJOR_VERSION = 1
+MINOR_VERSION = 8
+
+OBJS = main.o syslibc.o memory.o
+
+OBJS	+=	import.o
+
+#ITEM
+OBJS	+=	./Item/_createItem.o
+OBJS	+=	./Item/libmSetOpt.o
+OBJS	+=	./Item/libmCreateContext.o
+OBJS	+=	./Item/libmRemoveContext.o
+OBJS	+=	./Item/libmAddItem.o
+OBJS	+=	./Item/libmRemoveItem.o
+OBJS	+=	./Item/libmCreateCheckBox.o
+OBJS	+=	./Item/libmCreateContainer.o
+OBJS	+=	./Item/libmCreateRadioButton.o
+OBJS	+=	./Item/libmCreateRadioButtonGroup.o
+OBJS	+=	./Item/libmCreateSelectBox.o
+OBJS	+=	./Item/libmCreateSpacer.o
+OBJS	+=	./Item/libmCreateTriggerButtom.o
+OBJS	+=	./Item/libmCreateUpDownCtrl.o
+OBJS	+=	./Item/libmGetNextItem.o
+OBJS	+=	./Item/libmGetPrevItem.o
+OBJS	+=	./Item/libmGetBottomItem.o
+OBJS	+=	./Item/libmGetTopItem.o
+OBJS	+=	./Item/libmIsInvalidItem.o
+OBJS	+=	./Item/libmGetHandle.o
+OBJS	+=	./Item/libmRender.o
+
+
+#DRAW
+OBJS	+=	./Draw/libmConvert8888_XXXX.o
+OBJS	+=	./Draw/libmConvertXXXX_8888.o
+OBJS	+=	./Draw/libmAlphaBlend.o
+OBJS	+=	./Draw/libmDebugScreenSetXY.o
+OBJS	+=	./Draw/libmPrintXY.o
+OBJS	+=	./Draw/libmPrintfXY.o
+OBJS	+=	./Draw/libmPutCharXY.o
+OBJS	+=	./Draw/libmPoint.o
+OBJS	+=	./Draw/libmPointEx.o
+OBJS	+=	./Draw/libmLine.o
+OBJS	+=	./Draw/libmFrame.o
+OBJS	+=	./Draw/libmFillRect.o
+OBJS	+=	./Draw/libmCircle.o
+OBJS	+=	./Draw/libmInitBuffers.o
+OBJS	+=	./Draw/libmClearBuffers.o
+OBJS	+=	./Draw/libmSwapBuffers.o
+OBJS	+=	./Draw/libmMakeDrawAddr.o
+OBJS	+=	./Draw/libmGetColor.o
+#OBJS	+=	./Draw/libmGetCurVInfo.o
+OBJS	+=	./Draw/libmSetCurVInfo.o
+
+#Extension
+OBJS	+=	./Extension/libmLoadFont.o
+OBJS	+=	./Extension/libmLen.o
+OBJS	+=	./Extension/libmPrintXY16.o
+OBJS	+=	./Extension/libmPrintfXY16.o
+OBJS	+=	./Extension/libmGetIdxItem.o
+OBJS	+=	./Extension/libmPrintSymbolXY.o
+OBJS	+=	./Extension/libmPrintSymbolXY16.o
+OBJS	+=	./Extension/libmCloseAllContainer.o
+OBJS	+=	./Extension/libmGetActiveNum.o
+OBJS	+=	./Extension/libmHookDisplayHandler.o
+OBJS	+=	./Extension/libmInitBuffers_ForHook.o
+OBJS	+=	./Extension/libmGetFontAddr.o
+OBJS	+=	./Extension/libmPutCharXY16.o
+OBJS	+=	./Extension/libmPrintMyIcon.o
+
+BUILD_PRX = 1
+PRX_EXPORTS = exports.exp
+
+USE_KERNEL_LIBS = 1
+USE_KERNEL_LIBC = 1
+
+INCDIR		= 
+CFLAGS 		= -Os -G0 -Wall -DLNGJPN -DMAJOR_VERSION=$(MAJOR_VERSION) -DMINOR_VERSION=$(MINOR_VERSION)
+CXXFLAGS 	= $(CFLAGS) -fno-exceptions -fno-rtti
+ASFLAGS 	= $(CFLAGS)
+
+LIBDIR		= 
+LDFLAGS		= -mno-crt0 -nostartfiles
+LIBS		= -lpspsystemctrl_kernel -lpspkubridge
+
+
+PSPSDK=$(shell psp-config --pspsdk-path)
+include $(PSPSDK)/lib/build.mak

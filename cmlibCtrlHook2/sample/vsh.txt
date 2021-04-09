@@ -1,0 +1,3 @@
+ms0:/seplugins/lib/cmlibctrlhook.prx 1
+ms0:/seplugins/sample.prx 1
+ms0:/seplugins/sample2.prx 1

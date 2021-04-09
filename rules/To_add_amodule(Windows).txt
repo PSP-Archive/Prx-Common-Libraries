@@ -1,0 +1,35 @@
+モジュール追加手順（WINの場合）
+①cmdでプロンプト表示
+②対象のディレクトリに移動
+　例）cd C:TeamOchibaco\prx-common-libraries
+③ディレクトの中はこんな感じ
+	2011/07/09  11:46    <DIR>  .
+	2011/07/09  11:46    <DIR>  ..
+	2011/07/07  23:45    <DIR>  .hg
+	2011/07/07  23:45    <DIR>  cmlibAudio
+	2011/07/07  23:45    <DIR>  cmlibCtrl
+	2011/07/06  23:33    <DIR>  cmlibLog
+	2011/07/02  22:33    <DIR>  cmlibMenu
+	2011/07/02  22:36    <DIR>  cmlibPower
+④そこで、「hg add」
+　すると、「adding ○○○」と表示される
+⑤次に「hg commit」
+　すると、コミット用のテキストが表示される
+　これにコミットメッセージを記入する
+　上書き保存してテキストを閉じる。
+⑥次に、「hg push」
+　※ダメな場合は、以下
+　例）hg push  https://SnyFbSx@prx-common-libraries.googlecode.com/hg/
+　そうすると、こんな感じに表示される。
+	pushing to https://prx-common-libraries.googlecode.com/hg/
+	searching for changes
+	http authorization required
+	realm: Google Code hg Repository
+	user:
+⑦上記⑥のuserを入力し、パスワードを入れるとpush完了
+
+※パスワードをgmailと連動させることができます。
+設定箇所は、「http://code.google.com/p/prx-common-libraries/source/checkout」
+の「googlecode.com password.」リンクをクリック。
+遷移したページの「User Preferences」にある、「Security」のチェックをオンにすると完了。
+これをやらない場合のパスワードは「GoogleCode.com Password」に記載されているものになります。

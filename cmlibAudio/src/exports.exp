@@ -1,0 +1,24 @@
+# Define the exports for the prx
+PSP_BEGIN_EXPORTS
+
+# These four lines are mandatory (although you can add other functions like module_stop)
+# syslib is a psynonym for the single mandatory export.
+PSP_EXPORT_START(syslib, 0, 0x8000)
+PSP_EXPORT_FUNC_HASH(module_start)
+PSP_EXPORT_VAR_HASH(module_info)
+PSP_EXPORT_END
+
+PSP_EXPORT_START(cmlibAudio, 0, 0x4009)
+PSP_EXPORT_FUNC_HASH(libaudioGetVolume)
+PSP_EXPORT_FUNC_HASH(libaudioSetVolume)
+PSP_EXPORT_FUNC_HASH(libaudioMuteOn)
+PSP_EXPORT_FUNC_HASH(libaudioMuteOff)
+PSP_EXPORT_FUNC_HASH(libaudioMuteGetStatus)
+PSP_EXPORT_FUNC_HASH(libaudioMuteSetAgain)
+PSP_EXPORT_FUNC_HASH(libaudioIoEnable)
+PSP_EXPORT_FUNC_HASH(libaudioIoDisable)
+PSP_EXPORT_FUNC_HASH(libaudioIoGetStatus)
+PSP_EXPORT_FUNC_HASH(libaudioIoSetAgain)
+PSP_EXPORT_END
+
+PSP_END_EXPORTS

@@ -1,0 +1,26 @@
+#prxcmlib update script
+
+#サーバー名とポート番号HTTPなので80
+<SERVER> prx-common-libraries.googlecode.com:80
+
+#<GET> パス md5ハッシュ 保存先
+
+#cmlibmenu
+<GET> /hg/prxcmlib_pack/lib/cmlibmenu.prx md5 /seplugins/lib/cmlibmenu.prx
+<GET> /hg/prxcmlib_pack/lib/font/cg.bin md5 /seplugins/lib/font/cg.bin
+<GET> /hg/prxcmlib_pack/lib/font/hankaku_kana.bin md5 /seplugins/lib/font/hankaku_kana.bin
+<GET> /hg/prxcmlib_pack/lib/font/sjis.bin md5 /seplugins/lib/font/sjis.bin
+<GET> /hg/prxcmlib_pack/lib/font/cg.bin md5 /seplugins/lib/font/cg.bin
+
+#cmliblog
+<GET> /hg/prxcmlib_pack/lib/cmliblog.prx md5 /seplugins/lib/cmliblog.prx
+
+#cmlibctrl
+<GET> /hg/prxcmlib_pack/lib/cmlibctrl.prx md5 /seplugins/lib/cmlibctrl.prx
+
+#cmlibpower
+<GET> /hg/prxcmlib_pack/lib/cmlibpower.prx md5 /seplugins/lib/cmlibpower.prx
+
+#cmlibaudio
+<GET> /hg/prxcmlib_pack/lib/cmlibaudio.prx md5 /seplugins/lib/cmlibaudio.prx
+

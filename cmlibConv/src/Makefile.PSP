@@ -1,0 +1,37 @@
+TARGET		=	cmlibconv
+
+MAJOR_VERSION = 1
+MINOR_VERSION = 8
+
+
+OBJS	=	exports.o memory.o main.o
+OBJS	+=	./Function/libConvFreeMem.o
+OBJS	+=	./Function/libConvSjis_to_Utf8.o
+OBJS	+=	./Function/libConvSjis_to_Utf16.o
+OBJS	+=	./Function/libConvSjis_Utf16.o
+OBJS	+=	./Function/libConvUtf8_to_Sjis.o
+OBJS	+=	./Function/libConvUtf8_to_Utf16.o
+OBJS	+=	./Function/libConvUtf8_Utf16.o
+OBJS	+=	./Function/libConvUtf16_Sjis.o
+OBJS	+=	./Function/libConvUtf16_to_Sjis.o
+OBJS	+=	./Function/libConvUtf16len.o
+
+
+BUILD_PRX = 1
+PRX_EXPORTS = exports.exp
+
+USE_KERNEL_LIBS = 1
+USE_KERNEL_LIBC = 1
+
+INCDIR		= 
+CFLAGS 		= -Os -G0 -Wall -DLNGJPN -DMAJOR_VERSION=$(MAJOR_VERSION) -DMINOR_VERSION=$(MINOR_VERSION)
+CXXFLAGS 	= $(CFLAGS) -fno-exceptions -fno-rtti
+ASFLAGS 	= $(CFLAGS)
+
+LIBDIR		= 
+LDFLAGS		= -mno-crt0 -nostartfiles
+LIBS		= -lpspsystemctrl_kernel -lpspkubridge
+
+
+PSPSDK=$(shell psp-config --pspsdk-path)
+include $(PSPSDK)/lib/build.mak

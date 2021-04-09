@@ -1,0 +1,30 @@
+# Define the exports for the prx
+PSP_BEGIN_EXPORTS
+
+# These four lines are mandatory (although you can add other functions like module_stop)
+# syslib is a psynonym for the single mandatory export.
+PSP_EXPORT_START(syslib, 0, 0x8000)
+PSP_EXPORT_FUNC_HASH(module_start)
+PSP_EXPORT_VAR_HASH(module_info)
+PSP_EXPORT_END
+
+PSP_EXPORT_START(cmLibLog, 0, 0x4009)
+# PSP_EXPORT_FUNC_HASH(GetSizeStr)
+PSP_EXPORT_FUNC_HASH(liblogCreateLog)
+PSP_EXPORT_FUNC_HASH(liblogDestroyLog)
+PSP_EXPORT_FUNC_HASH(liblogClear)
+PSP_EXPORT_FUNC_HASH(liblogPrint)
+PSP_EXPORT_FUNC_HASH(liblogPrintf)
+PSP_EXPORT_FUNC_HASH(liblogPrintBool)
+PSP_EXPORT_FUNC_HASH(liblogPrintInt)
+PSP_EXPORT_FUNC_HASH(liblogPrintUint)
+PSP_EXPORT_FUNC_HASH(liblogPrintU64)
+PSP_EXPORT_FUNC_HASH(liblogPrintHex)
+PSP_EXPORT_FUNC_HASH(liblogPrintHex64)
+PSP_EXPORT_FUNC_HASH(liblogPrintPspModel)
+PSP_EXPORT_FUNC_HASH(liblogPrintMaxFreeMem)
+PSP_EXPORT_FUNC_HASH(liblogSetLogName)
+PSP_EXPORT_FUNC_HASH(liblogGetLogName)
+PSP_EXPORT_END
+
+PSP_END_EXPORTS

@@ -1,0 +1,5 @@
+psp-gcc -IC:/pspsdk/psp/sdk/include/libc -I. -IC:/pspsdk/psp/sdk/include -O2 -G0 -Wall -fno-builtin-printf -D_PSP_FW_VERSION=150   -c -o main.o main.c
+psp-gcc -I. -IC:/pspsdk/psp/sdk/include -O2 -G0 -Wall -fno-builtin-printf -I. -IC:/pspsdk/psp/sdk/include -O2 -G0 -Wall -fno-builtin-printf   -c -o cmlibCtrl.o cmlibCtrl.S
+psp-gcc -IC:/pspsdk/psp/sdk/include/libc -I. -IC:/pspsdk/psp/sdk/include -O2 -G0 -Wall -fno-builtin-printf -D_PSP_FW_VERSION=150  -L. -LC:/pspsdk/psp/sdk/lib -Wl,-q,-TC:/pspsdk/psp/sdk/lib/linkfile.prx -mno-crt0 -nostartfiles   main.o cmlibCtrl.o  -lpspdebug -lpspdisplay_driver -lpspctrl_driver -lpspsdk  -lpspkernel -o cmlibCtrl_sample.elf
+psp-fixup-imports cmlibCtrl_sample.elf
+psp-prxgen cmlibCtrl_sample.elf cmlibCtrl_sample.prx

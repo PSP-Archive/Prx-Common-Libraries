@@ -1,0 +1,42 @@
+リポジトリバージョンチェック
+　hg parents
+
+クローン作製
+　hg clone https://xxxxxxxx@prx-common-libraries.googlecode.com/hg/ prx-common-libraries 
+
+リポジトリログ
+　hg log
+
+より詳細なリポジトリログ
+　hg log -v
+　hg log --debug
+
+リポジトリ指定してのログ
+　hg log -r0
+　※0の部分がリポジトリ
+
+最新のチェンジセット表示
+　hg tip
+　hg log -r tip
+
+変更確認
+　hg status
+
+比較
+　hg diff
+
+変更前の状態に戻す
+　hg revert
+
+コミット
+　hg commit
+
+更新
+　hg update
+
+変更を取り出す
+　hg export tip
+
+マージ
+　hg merge
+

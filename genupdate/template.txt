@@ -1,0 +1,27 @@
+#prxcmlib update script
+
+<SERVER> prx-common-libraries.googlecode.com:80
+
+#cmLibMenu
+<GET> /hg/prxcmlib_pack/lib/cmlibmenu.prx /seplugins/lib/cmlibmenu.prx
+<GET> /hg/prxcmlib_pack/lib/font/cg.bin /seplugins/lib/font/cg.bin
+<GET> /hg/prxcmlib_pack/lib/font/hankaku_kana.bin /seplugins/lib/font/hankaku_kana.bin
+<GET> /hg/prxcmlib_pack/lib/font/sjis.bin /seplugins/lib/font/sjis.bin
+<GET> /hg/prxcmlib_pack/lib/font/icon.bin /seplugins/lib/font/icon.bin
+
+#cmLibLog
+<GET> /hg/prxcmlib_pack/lib/cmliblog.prx /seplugins/lib/cmliblog.prx
+
+#cmLibCtrl
+<GET> /hg/prxcmlib_pack/lib/cmlibctrl.prx /seplugins/lib/cmlibctrl.prx
+
+#cmLibPower
+<GET> /hg/prxcmlib_pack/lib/cmlibpower.prx /seplugins/lib/cmlibpower.prx
+
+#cmLibAudio
+<GET> /hg/prxcmlib_pack/lib/cmlibaudio.prx /seplugins/lib/cmlibaudio.prx
+
+#cmLibConv
+<GET> /hg/prxcmlib_pack/lib/cmlibconv.prx /seplugins/lib/cmlibconv.prx
+<GET> /hg/prxcmlib_pack/lib/conv/StoU.bin /seplugins/lib/conv/StoU.bin
+<GET> /hg/prxcmlib_pack/lib/conv/UtoS.bin /seplugins/lib/conv/UtoS.bin

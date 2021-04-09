@@ -1,0 +1,27 @@
+#prxcmlib update script
+
+<SERVER> prx-common-libraries.googlecode.com:80
+
+#cmLibMenu
+<GET> /hg/prxcmlib_pack/lib/cmlibmenu.prx e10aa4a3618ff49107cc52f5b56e8626 /seplugins/lib/cmlibmenu.prx
+<GET> /hg/prxcmlib_pack/lib/font/cg.bin eae9eb424d708131375ab26dec2dbfb4 /seplugins/lib/font/cg.bin
+<GET> /hg/prxcmlib_pack/lib/font/hankaku_kana.bin 748dfc462cb989e1769d09fe8337c028 /seplugins/lib/font/hankaku_kana.bin
+<GET> /hg/prxcmlib_pack/lib/font/sjis.bin 220c71f0a83d624b86d252162fd57d29 /seplugins/lib/font/sjis.bin
+<GET> /hg/prxcmlib_pack/lib/font/icon.bin 0e1b83d958ed86398bb37675644b7d12 /seplugins/lib/font/icon.bin
+
+#cmLibLog
+<GET> /hg/prxcmlib_pack/lib/cmliblog.prx 49a56ea7759d8bf2650243a05ceab167 /seplugins/lib/cmliblog.prx
+
+#cmLibCtrl
+<GET> /hg/prxcmlib_pack/lib/cmlibctrl.prx d4f44ea0586794605296834a16be6288 /seplugins/lib/cmlibctrl.prx
+
+#cmLibPower
+<GET> /hg/prxcmlib_pack/lib/cmlibpower.prx 26b58b037105b6283c56d1f6e3e9e622 /seplugins/lib/cmlibpower.prx
+
+#cmLibAudio
+<GET> /hg/prxcmlib_pack/lib/cmlibaudio.prx ab4a7d2e4b84c547a11c9a61134b542d /seplugins/lib/cmlibaudio.prx
+
+#cmLibConv
+<GET> /hg/prxcmlib_pack/lib/cmlibconv.prx 6b4d9d5bcbceb3faeddc686193d1e432 /seplugins/lib/cmlibconv.prx
+<GET> /hg/prxcmlib_pack/lib/conv/StoU.bin 022101be2b8dceadd28bdffbfce6d1c2 /seplugins/lib/conv/StoU.bin
+<GET> /hg/prxcmlib_pack/lib/conv/UtoS.bin b1b2dabcf0dc7e224cdc725b3d64d656 /seplugins/lib/conv/UtoS.bin
